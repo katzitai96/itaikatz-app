@@ -1,0 +1,29 @@
+.NasaImage {
+    max-width: 50%;
+}
+
+.NasaImageDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    border: 1px solid #ccc;
+    justify-content: center;
+    align-items: center;
+    /* width: ; */
+}
+
+.NasaImageDiv:hover{
+   border: 1px solid #777;
+}
+
+.NasaImageDisc {
+    padding: 15px;
+    text-align: center;
+}
+
+.NasaImagesPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
