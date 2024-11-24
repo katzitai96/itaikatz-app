@@ -1,0 +1,28 @@
+.SockLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.ForgotPasswordBtn {
+    border: none;
+    text-decoration: underline;
+    color: blue;
+    font-family: "Avenir";
+}
+
+.SignInSubmit {
+    padding: 0.2em 3em;
+    border: 0.07em solid black;
+    border-radius: 1rem;
+    margin-top: 1rem;  
+}
+
+.SignInInput {
+    padding: 0.5em 2em;
+    border: 0.07em solid black;
+    border-radius: 1rem;  
+}

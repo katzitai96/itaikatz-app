@@ -1,6 +1,6 @@
 import { NASA_API_KEY } from "@/lib/config";
 import styles from "./page.module.css";
-import NasaImage, { NasaItemData } from "@/app/nasa/nasaImage";
+import NasaImage, { NasaItemData } from "./nasaImage/page";
 
 export default async function Nasa() {
   const data = getNasaData(3);

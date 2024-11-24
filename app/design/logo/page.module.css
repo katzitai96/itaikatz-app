@@ -1,0 +1,25 @@
+.SockTimeLogo{
+    background-color: #0B5CFF;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+.Slogan {
+    font-family: "80kb";
+    line-height: 100%;
+    justify-content: end;
+    margin-top: 0.5rem;
+}
+
+.by {
+    line-height: 100%;
+    margin-bottom: 1rem;
+}
+
+.ZoomLogo{
+    margin-bottom: 2rem;
+}

@@ -14,6 +14,7 @@
 
   --font-titles: "Rubik", serif;
   --font-body: system-ui, sans-serif; /* system-ui matches the user's system font */
+  --font-sock-login: Avenir;
 }
 
 body {
@@ -36,6 +37,7 @@ header {
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  flex-wrap:wrap;
 
   a {
     text-decoration: none;
@@ -90,7 +92,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   font-family: var(--font-titles);
   font-weight: 500;
   font-optical-sizing: auto;
