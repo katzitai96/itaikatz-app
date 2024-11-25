@@ -1,0 +1,45 @@
+.loginFailedLayout{
+    /* position: absolute; */
+    height: 40rem;
+    background-color: red;
+    padding: 1rem 3rem;
+}
+
+.loginFailed{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.SignInSubmit {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* padding: 0.9em 1.7em; */
+    border: 0.07em solid black;
+    border-radius: 1.8rem;
+    margin-top: 0.3rem;  
+    background-color: white;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    height: 3rem;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.bigX {
+    margin-top: 2rem;
+    width: 4.5rem;
+}
+
+.discription {
+    color: white;
+}

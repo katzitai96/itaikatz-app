@@ -1,0 +1,14 @@
+.SockTimeMain {
+    background-color: #0B5CFF;
+    padding: 0;
+    overflow-y: auto;
+}
+
+@font-face {
+    font-family: 80kb;
+    src: local("C:\Documents\ProductDev\itaikatz-app\public\80kb_desk\80-kb-Soft.otf");
+}
+
+.checking {
+    font-family: 80kb;
+}

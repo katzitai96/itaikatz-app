@@ -1,0 +1,52 @@
+.loginSuccessLayout{
+    padding: 0;
+    /* position: absolute; */
+    height: 40rem;
+    background-color: inherit;
+    margin: 1rem 3rem;
+}
+
+.loginSuccessful{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.SignInSubmit {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* padding: 0.9em 1.7em; */
+    border: 0.07em solid black;
+    border-radius: 1.8rem;
+    margin-top: 0.3rem;  
+    background-color: white;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    height: 3rem;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.arrowRight {
+    margin-left: 1.2rem;
+}
+
+.SignInSubmit_figure {
+    width: 10rem;
+}
+
+.VImage {
+    margin-top: 2rem;
+    width: 4.5rem;
+}
+
+.discription {
+    color: white;
+}

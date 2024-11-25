@@ -30,6 +30,18 @@ main {
   margin: 0 auto;
 }
 
+.burger-logo {
+  width: 50px;
+}
+#drop {
+  background-color: #5c636a;
+}
+
+.dropdown-itai{
+  border-color: black;
+  color: white
+}
+
 header {
   padding: 1rem 2rem;
   background-color: var(--color-primary);

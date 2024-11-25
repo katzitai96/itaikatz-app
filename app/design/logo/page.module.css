@@ -1,16 +1,20 @@
 .SockTimeLogo{
-    background-color: #0B5CFF;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     color: white;
+    margin-top: 3rem;
+}
+.SockTimeLogoImg {
+    size:50px;
 }
 
 .Slogan {
     font-family: "80kb";
     line-height: 100%;
+    font-size: 3rem;
     justify-content: end;
     margin-top: 0.5rem;
 }

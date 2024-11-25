@@ -1,47 +1,26 @@
-.SockLogin {
+.ResetPassLayout{
+    padding: 0;
+    /* background-color: blue; */
+}
+
+.ResetPassword {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2rem 3rem;
+    padding: 1rem 1rem;
     border-radius: 1.5rem 1.5rem 0 0;
     border: 1px solid black;
     border-bottom-color: white;
     background-color: white;
+    margin-top: 20%;
+    padding-bottom: 100%;
 }
 
-.LoginForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.passWordSubscript{
-    display:flex;
-    /* block: row; */
-    justify-content:space-between;
-    align-items: center;
-    font-size: 0.8rem;
+.title{
     font-family: "Avenir";
-    width: 20rem;
-}
-
-.wrongPasswordLabel {
-    margin:0;
-    color: red;
-    justify-self: end;
-}
-
-.ForgotPasswordBtn {
-    background-color: white;
-    border: none;
-    text-decoration: underline;
-    color: rgb(161, 161, 161);
-    /* align-self: start; */
-    /* margin-left: 1rem; */
+    margin-right: 25%;
 }
 
 .input_sign_in {
@@ -85,6 +64,21 @@
     text-align: left;
 
 }
+.titleAndArrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.arrowLeftImg{
+    padding-bottom: 1rem;
+}
+
+.welcome_text_2{
+    margin: 0.5rem 0rem;
+}
 
 .email_input_value {
     border: 0px solid black;
@@ -92,17 +86,12 @@
     width: 71%;
 }
 
-.password_input_value {
-    border: 0px solid black;
-    outline: none;
-}   
-
 
 .SignInSubmit {
     padding: 0.2em 3em;
     border: 0.07em solid black;
     border-radius: 1rem;
-    margin-top: 1rem;  
+    margin-top: 2rem;  
     background-color: white;
     font-weight: bold;
 
