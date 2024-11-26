@@ -21,17 +21,32 @@ async function getNasaData(count: number) {
   );
   const data: [] = await response.json();
 
-  const allData = data.map((item: any, index: number) => {
-    return (
-      <NasaImage
-        hdurl={item.hdurl}
-        explanation={item.explanation}
-        date={item.date}
-        key={index}
-        title={item.title}
-        index={index}
-      ></NasaImage>
-    );
-  });
-  return <div className={styles.NasaImagesPage}>{allData}</div>;
+  // const allData = data.map((item: any, index: number) => {
+  //   return (
+  //     <NasaImage
+  //       hdurl={item.hdurl}
+  //       explanation={item.explanation}
+  //       date={item.date}
+  //       key={index}
+  //       title={item.title}
+  //       index={index}
+  //     ></NasaImage>
+  //   );
+  // });
+  return (
+    <div className={styles.NasaImagesPage}>
+      {data.map((item: any, index: number) => {
+        return (
+          <NasaImage
+            hdurl={item.hdurl}
+            explanation={item.explanation}
+            date={item.date}
+            key={index}
+            title={item.title}
+            index={index}
+          ></NasaImage>
+        );
+      })}
+    </div>
+  );
 }
