@@ -65,7 +65,7 @@
     background-color: white;
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     border: 0.07em solid red;
     border-radius: 1.5rem;
@@ -76,6 +76,7 @@
 
 .clearField {
     cursor: pointer;
+    /* padding-right: 1rem; */
 }
 
 .input_label {
@@ -95,6 +96,7 @@
 .password_input_value {
     border: 0px solid black;
     outline: none;
+    width: 61%;
 }   
 
 

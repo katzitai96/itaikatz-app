@@ -1,11 +1,13 @@
 "use client";
 
-import { a } from "framer-motion/client";
 import styles from "./page.module.css";
 import { useState } from "react";
-import { redirect } from "next/navigation";
-
-export default function SockLogin() {
+import { signIn } from "@/lib/components/serverLogin";
+export default function SockLogin({
+  searchParams = { message: "" },
+}: {
+  searchParams?: { message: string }; // Optional type for flexibility
+}) {
   const welcome_text_1 = "Welcome to SockTime, a social add-on for Zoom.";
   const welcome_text_2 =
     "To upload a picture of your socks and share it with other participants, enter your details";
@@ -14,33 +16,18 @@ export default function SockLogin() {
   const [clearButtonVisible_2, setClearButtonVisible2] = useState(false);
   const [value1, setValue1] = useState("");
   const [value2, setValue2] = useState("");
-  const [signInSuccess, setsignInSuccess] = useState(0);
 
   const showClearButton1 = () => {
-    if (!clearButtonVisible_1) {
-      setClearButtonVisible1(true);
-    }
+    setClearButtonVisible1(!clearButtonVisible_1);
   };
-
   const showClearButton2 = () => {
-    if (!clearButtonVisible_2) {
-      setClearButtonVisible2(true);
-    }
+    setClearButtonVisible2(!clearButtonVisible_2);
   };
-
   const clearField1 = () => {
     setValue1("");
-    setClearButtonVisible1(false);
   };
-
   const clearField2 = () => {
     setValue2("");
-    setClearButtonVisible2(false);
-  };
-
-  const signInAction = () => {
-    setsignInSuccess(1); // error
-    // setsignInSuccess(2); // success
   };
 
   return (
@@ -48,10 +35,10 @@ export default function SockLogin() {
       <p>
         {welcome_text_1} <br /> {welcome_text_2}
       </p>
-      <form className={styles.LoginForm} action={signInAction}>
+      <form className={styles.LoginForm} action={signIn}>
         <div
           className={
-            signInSuccess != 1
+            searchParams.message == ""
               ? styles.input_sign_in
               : styles.input_sign_in_invalid
           }
@@ -76,13 +63,13 @@ export default function SockLogin() {
               src="/x.svg"
               alt="clear email"
               className={styles.clearField}
-              onClick={clearField1}
+              onMouseDown={clearField1}
             />
           )}
         </div>
         <div
           className={
-            signInSuccess != 1
+            searchParams.message == ""
               ? styles.input_sign_in
               : styles.input_sign_in_invalid
           }
@@ -104,11 +91,12 @@ export default function SockLogin() {
           {clearButtonVisible_2 && (
             <img
               src="/x.svg"
-              alt="clear email"
+              alt="clear password"
               className={styles.clearField}
-              onClick={clearField2}
+              // onClick={clearField2}
               onFocus={showClearButton2}
               onBlur={showClearButton2}
+              onMouseDown={clearField2}
             />
           )}
         </div>
@@ -116,9 +104,7 @@ export default function SockLogin() {
           <a className={styles.ForgotPasswordBtn} href="/design/resetPassword">
             Forgot password?
           </a>
-          {signInSuccess == 1 && (
-            <p className={styles.wrongPasswordLabel}>The input is incorrect</p>
-          )}
+          <p className={styles.wrongPasswordLabel}>{searchParams.message}</p>
         </section>
         <input type="submit" className={styles.SignInSubmit} value="Sign in" />
       </form>

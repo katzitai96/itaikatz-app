@@ -11,10 +11,3 @@ export default function loginFailed() {
     </section>
   );
 }
-
-/*
-fix style of menu
-add real login
-fix clear button logic
----order css and structure
-*/

@@ -23,6 +23,11 @@ body {
   font-family: var(--font-body);
 }
 
+.dropdown-menu-itai {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Layout */
 main {
   max-width: 60rem;

@@ -15,9 +15,9 @@ export interface NasaItemData {
 export default function NasaImage(props: NasaItemData) {
   return (
     <div key={props.index} className={styles.NasaImageDiv}>
-      <h2>
+      <h3>
         {props.title} {props.date}
-      </h2>
+      </h3>
       <img src={props.hdurl} alt="picture" className={styles.NasaImage} />
       <p className={styles.NasaImageDisc}>{props.explanation}</p>
     </div>

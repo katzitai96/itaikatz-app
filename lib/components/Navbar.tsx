@@ -18,6 +18,8 @@ import {
   DropdownItem,
 } from "@nextui-org/dropdown";
 
+import "/styles/global.css";
+
 import "bootstrap/dist/css/bootstrap.css";
 
 export default function Navbar() {
@@ -39,6 +41,7 @@ export default function Navbar() {
             aria-label="Static Actions"
             color="primary"
             variant="bordered"
+            className="dropdown-menu-itai"
           >
             <DropdownItem
               href="/"
