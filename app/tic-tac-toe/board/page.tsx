@@ -3,15 +3,15 @@
 import Square from "@/app/tic-tac-toe/Square";
 import styles from "../page.module.css";
 
-interface Props {
-  winningCalc: (numbers: Array<string>) => string | null;
-  squares: Array<string>;
-  setSquares: (numbers: Array<string>) => void;
-  XisNext: boolean;
-  setXisNext: (XisNext: boolean) => void;
-}
+// interface Props {
+//   winningCalc: (numbers: Array<string>) => string | null;
+//   squares: Array<string>;
+//   setSquares: (numbers: Array<string>) => void;
+//   XisNext: boolean;
+//   setXisNext: (XisNext: boolean) => void;
+// }
 
-export default function Board(props: Props) {
+export default function Board(props: any) {
   function squareClickHandler(i: number): void {
     if (props.squares[i] || props.winningCalc(props.squares)) {
       return;

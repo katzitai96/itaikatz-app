@@ -3,11 +3,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import styles from "./page.module.css";
 
-export default function Login({
-  searchParams,
-}: {
-  searchParams: { message: string };
-}) {
+export default function Login() {
   const signIn = async (formData: FormData) => {
     "use server";
     const email = formData.get("email") as string;
@@ -63,9 +59,9 @@ export default function Login({
 
         <button>Log In</button>
         {/* <button formAction={signUp}>Sign Up</button> */}
-        {searchParams?.message && (
+        {/* {searchParams?.message && (
           <p className={styles.errorMessage}>{searchParams.message}</p>
-        )}
+        )} */}
       </form>
     </div>
   );

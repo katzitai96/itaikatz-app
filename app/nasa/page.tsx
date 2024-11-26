@@ -1,6 +1,6 @@
 import { NASA_API_KEY } from "@/lib/config";
 import styles from "./page.module.css";
-import NasaImage, { NasaItemData } from "./nasaImage/page";
+import NasaImage from "./nasaImage/page";
 
 export default async function Nasa() {
   const data = getNasaData(3);
@@ -20,15 +20,16 @@ async function getNasaData(count: number) {
       count
   );
   const data = await response.json();
-  const allData = data.map((item: NasaItemData, index: number) => {
+
+  const allData = data.map((item: any, index: number) => {
     return (
       <NasaImage
-        key={index}
-        title={item.title}
-        index={index}
         hdurl={item.hdurl}
         explanation={item.explanation}
         date={item.date}
+        key={index}
+        title={item.title}
+        index={index}
       ></NasaImage>
     );
   });
