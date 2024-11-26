@@ -1,3 +1,4 @@
+"use client";
 import styles from "../../app/tic-tac-toe/page.module.css";
 
 interface Props {

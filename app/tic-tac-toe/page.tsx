@@ -4,7 +4,7 @@ import { useState } from "react";
 import Board from "./board/page";
 export default function TicTacToe() {
   const [XisNext, setXIsNext] = useState(true);
-  const [squares, setsquares] = useState(Array(9).fill(""));
+  const [squares, setsquares] = useState<string[]>(new Array(9).fill(""));
 
   const winner = calculateWinner(squares);
   let status;
