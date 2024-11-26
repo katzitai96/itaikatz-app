@@ -19,7 +19,7 @@ async function getNasaData(count: number) {
       "&count=" +
       count
   );
-  const data = await response.json();
+  const data: [] = await response.json();
 
   const allData = data.map((item: any, index: number) => {
     return (
