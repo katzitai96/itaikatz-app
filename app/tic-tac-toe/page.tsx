@@ -1,7 +1,7 @@
 "use client";
 import styles from "./page.module.css";
 import { useState } from "react";
-import Board from "./board/page";
+import Board from "./board/Board";
 export default function TicTacToe() {
   const [XisNext, setXIsNext] = useState(true);
   const [squares, setsquares] = useState<string[]>(new Array(9).fill(""));

@@ -1,9 +1,9 @@
 "use client";
 
 import Square from "@/lib/components/Square";
-import styles from "./page.module.css";
+import styles from "./Board.module.css";
 
-interface Props {
+interface BoardProps {
   winningCalc: (numbers: Array<string>) => string | null;
   squares: Array<string>;
   setSquares: (numbers: Array<string>) => void;
@@ -11,7 +11,7 @@ interface Props {
   setXisNext: (XisNext: boolean) => void;
 }
 
-export default function Board(props: any) {
+export default function Board(props: BoardProps) {
   function squareClickHandler(i: number): void {
     if (props.squares[i] || props.winningCalc(props.squares)) {
       return;
