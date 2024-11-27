@@ -1,3 +1,5 @@
+"use server";
+
 import styles from "./page.module.css";
 import { getData } from "./components/getNasaData";
 import NasaImage from "./components/NasaImage";
