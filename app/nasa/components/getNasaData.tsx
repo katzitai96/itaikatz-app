@@ -9,25 +9,26 @@ export async function getData(count: number) {
     );
 
     // Check if the response is successful
-    // if (!response.ok) {
-    //   console.error(
-    //     "Error fetching NASA data:",
-    //     response.status,
-    //     response.statusText
-    //   );
-    //   throw new Error(`Failed to fetch data: ${response.statusText}`);
-    // }
+    if (!response.ok) {
+      console.error(
+        "Error fetching NASA data:",
+        response.status,
+        response.statusText
+      );
+      throw new Error(`Failed to fetch data: ${response.statusText}`);
+    }
 
     const data = await response.json(); // Parse and return the data
 
     // Validate response type (if you expect an array)
-    // if (!Array.isArray(data)) {
-    //   throw new Error("Unexpected API response format: expected an array.");
-    // }
+    if (!Array.isArray(data)) {
+      throw new Error("Unexpected API response format: expected an array.");
+    }
 
     return data;
   } catch (error) {
     console.error("Error in getData function:", error);
-    throw error; // Re-throw the error after logging
+    return [];
+    // throw error; // Re-throw the error after logging
   }
 }
