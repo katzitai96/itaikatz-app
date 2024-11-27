@@ -37,46 +37,46 @@ export default function Board(props: any) {
           ></Square>
           <hr className={styles.sep_column} />
           <Square
-            value={props.square ? props.squares[1] : ""}
+            value={props.squares ? props.squares[1] : ""}
             clickHandler={() => squareClickHandler(1)}
           ></Square>
           <hr className={styles.sep_column} />
           <Square
-            value={props.square ? props.squares[2] : ""}
+            value={props.squares ? props.squares[2] : ""}
             clickHandler={() => squareClickHandler(2)}
           ></Square>
         </div>
         <hr className={styles.sep_line} />
         <div className={styles.board_row}>
           <Square
-            value={props.square ? props.squares[3] : ""}
+            value={props.squares ? props.squares[3] : ""}
             clickHandler={() => squareClickHandler(3)}
           ></Square>
           <hr className={styles.sep_column} />
           <Square
-            value={props.square ? props.squares[4] : ""}
+            value={props.squares ? props.squares[4] : ""}
             clickHandler={() => squareClickHandler(4)}
           ></Square>
           <hr className={styles.sep_column} />
           <Square
-            value={props.square ? props.squares[5] : ""}
+            value={props.squares ? props.squares[5] : ""}
             clickHandler={() => squareClickHandler(5)}
           ></Square>
         </div>
         <hr className={styles.sep_line} />
         <div className={styles.board_row}>
           <Square
-            value={props.square ? props.squares[6] : ""}
+            value={props.squares ? props.squares[6] : ""}
             clickHandler={() => squareClickHandler(6)}
           ></Square>
           <hr className={styles.sep_column} />
           <Square
-            value={props.square ? props.squares[7] : ""}
+            value={props.squares ? props.squares[7] : ""}
             clickHandler={() => squareClickHandler(7)}
           ></Square>
           <hr className={styles.sep_column} />
           <Square
-            value={props.square ? props.squares[8] : ""}
+            value={props.squares ? props.squares[8] : ""}
             clickHandler={() => squareClickHandler(8)}
           ></Square>
         </div>

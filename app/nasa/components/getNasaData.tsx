@@ -1,10 +1,11 @@
 "use client";
-
+import { NASA_API_KEY } from "@/lib/config";
 export async function getData(count: number) {
-  const apiKey = process.env.NEXT_PUBLIC_NASA_API_KEY;
-  if (!apiKey) {
-    throw new Error("NASA API key is not defined in environment variables.");
-  }
+  // const apiKey = process.env.NEXT_PUBLIC_NASA_API_KEY;
+  const apiKey = "j2zipbCE6bLP8y8WyyMb39Sam3Tnu5eM6abgmUiE";
+  // if (!apiKey) {
+  //   throw new Error("NASA API key is not defined in environment variables.");
+  // }
 
   try {
     // Make the HTTP GET request to the NASA API
