@@ -8,7 +8,7 @@ import NasaImage from "./components/NasaImage";
 export default async function Nasa() {
   // const [apodData, setApodData] = useState<any[]>([]);
 
-  const apodData = await getData(4);
+  const apodData: any[] = await getData(4);
 
   // useEffect(() => {
   //   const fetchData = async () => {
