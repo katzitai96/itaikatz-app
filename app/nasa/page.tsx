@@ -1,13 +1,27 @@
+"use client";
+
 import { NASA_API_KEY } from "@/lib/config";
 import styles from "./page.module.css";
+import { getData } from "./components/getNasaData";
 import NasaImage from "./nasaImage/page";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default async function Nasa() {
+export default function Nasa() {
   const [apodData, setApodData] = useState<any[]>([]);
 
-  const data: [] = await getNasaData(3);
-  setApodData(data);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getData(4);
+        console.log("Fetched APOD Data");
+        setApodData(data);
+      } catch (error) {
+        console.error("Error fetching APOD data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <main>
       <h1>Nasa Images</h1>
@@ -27,15 +41,4 @@ export default async function Nasa() {
       </div>
     </main>
   );
-}
-
-async function getNasaData(count: number) {
-  const response = await fetch(
-    "https://api.nasa.gov/planetary/apod?api_key=" +
-      NASA_API_KEY +
-      "&count=" +
-      count
-  );
-  const data = await response.json();
-  return data;
 }
