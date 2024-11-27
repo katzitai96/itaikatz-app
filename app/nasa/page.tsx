@@ -4,14 +4,15 @@ import NasaImage from "./nasaImage/page";
 import { useState } from "react";
 
 export default async function Nasa() {
-  // const [apodData, setApodData] = useState<any[]>([]);
+  const [apodData, setApodData] = useState<any[]>([]);
 
   const data: [] = await getNasaData(3);
+  setApodData(data);
   return (
     <main>
       <h1>Nasa Images</h1>
       <div className={styles.NasaImagesPage}>
-        {data.map((item: any, index: number) => {
+        {apodData.map((item: any, index: number) => {
           return (
             <NasaImage
               hdurl={item.hdurl}
