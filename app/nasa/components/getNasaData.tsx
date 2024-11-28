@@ -1,11 +1,10 @@
 "use server";
-
-import { NEXT_PUBLIC_NASA_API_KEY } from "@/lib/config";
 export async function getData(count: number) {
   try {
+    const apyKey = process.env.NASA_API_KEY;
     // Make the HTTP GET request to the NASA API
     const response = await fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=${NEXT_PUBLIC_NASA_API_KEY}&count=${count}`
+      `https://api.nasa.gov/planetary/apod?api_key=${apyKey}&count=${count}`
     );
 
     // Check if the response is successful
