@@ -57,4 +57,4 @@ export const SUPABASE_ENABLED =
     ? true
     : false;
 
-export const NASA_API_KEY = process.env.NASA_API_KEY || "";
+export const NEXT_PUBLIC_NASA_API_KEY = process.env.NEXT_PUBLIC_NASA_API_KEY || "";
