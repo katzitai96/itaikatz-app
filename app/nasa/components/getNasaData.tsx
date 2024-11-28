@@ -10,7 +10,7 @@ export async function getData(count: number) {
 
     // Check if the response is successful
     if (!response.ok) {
-      console.error(
+      console.log(
         "Error fetching NASA data:",
         response.status,
         response.statusText
@@ -27,7 +27,7 @@ export async function getData(count: number) {
 
     return data;
   } catch (error) {
-    console.error("Error in getData function:", error);
+    console.log("Error in getData function:", error);
     return [];
     // throw error; // Re-throw the error after logging
   }
