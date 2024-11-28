@@ -1,4 +1,3 @@
-"use server";
 export async function getData(count: number) {
   try {
     const apyKey = process.env.NASA_API_KEY;
