@@ -8,7 +8,7 @@ import NasaImage from "./components/NasaImage";
 export default async function Nasa() {
   // const [apodData, setApodData] = useState<any[]>([]);
 
-  const apodData: any[] = await getData(4);
+  const dataCheck: any[] = await getData(4);
 
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -27,7 +27,7 @@ export default async function Nasa() {
     <main>
       <h1>Nasa Images</h1>
       <div className={styles.NasaImagesPage}>
-        {apodData.map((item: any, index: number) => {
+        {dataCheck.map((item: any, index: number) => {
           return (
             <NasaImage
               hdurl={item.hdurl}

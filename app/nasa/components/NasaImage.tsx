@@ -1,4 +1,3 @@
-"use server";
 import styles from "../page.module.css";
 
 interface NasaItemDataProps {
@@ -13,7 +12,7 @@ interface NasaItemDataProps {
   index: number;
 }
 
-export default async function NasaImage(props: NasaItemDataProps) {
+export default function NasaImage(props: NasaItemDataProps) {
   return (
     <div className={styles.NasaImageDiv}>
       <h3>
