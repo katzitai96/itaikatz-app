@@ -7,7 +7,9 @@ export async function getData(count: number) {
     const response = await fetch(
       `https://api.nasa.gov/planetary/apod?api_key=${apyKey}&count=${count}`
     );
-
+    console.log(
+      `https://api.nasa.gov/planetary/apod?api_key=${apyKey}&count=${count}`
+    );
     // Check if the response is successful
     if (!response.ok) {
       console.log(
