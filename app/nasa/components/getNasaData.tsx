@@ -15,19 +15,19 @@ export async function getData(count: number) {
         response.status,
         response.statusText
       );
-      throw new Error(`Failed to fetch data: ${response.statusText}`);
+      // throw new Error(`Failed to fetch data: ${response.statusText}`);
     }
 
     const data = await response.json(); // Parse and return the data
 
     // Validate response type (if you expect an array)
     if (!Array.isArray(data)) {
-      throw new Error("Unexpected API response format: expected an array.");
+      // throw new Error("Unexpected API response format: expected an array.");
     }
 
     return data;
   } catch (error) {
-    // console.log("Error in getData function:", error);
+    console.log("Error in getData function:", error);
     // return [];
     throw error; // Re-throw the error after logging
   }
