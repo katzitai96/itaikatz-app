@@ -1,6 +1,8 @@
+import { NASA_API_KEY } from "@/lib/config";
+
 export async function getData(count: number) {
   try {
-    const apyKey = process.env.NASA_API_KEY;
+    const apyKey = NASA_API_KEY;
     // Make the HTTP GET request to the NASA API
     const response = await fetch(
       `https://api.nasa.gov/planetary/apod?api_key=${apyKey}&count=${count}`
@@ -25,8 +27,8 @@ export async function getData(count: number) {
 
     return data;
   } catch (error) {
-    console.log("Error in getData function:", error);
-    return [];
-    // throw error; // Re-throw the error after logging
+    // console.log("Error in getData function:", error);
+    // return [];
+    throw error; // Re-throw the error after logging
   }
 }
