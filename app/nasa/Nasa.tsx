@@ -3,9 +3,7 @@ import { getData } from "./getNasaData";
 import NasaImage from "./components/NasaImage";
 // import { useEffect, useState } from "react";
 
-export default async function Nasa() {
-  const dataCheck: any[] = await getData(4);
-
+export default function Nasa({ dataCheck }) {
   return (
     <main>
       <h1>Nasa Images</h1>
@@ -25,4 +23,9 @@ export default async function Nasa() {
       </div>
     </main>
   );
+}
+
+export async function FetchNasaData() {
+  const dataCheck: any[] = await getData(4);
+  return { props: { dataCheck } };
 }

@@ -1,8 +1,9 @@
 import { NASA_API_KEY } from "@/lib/config";
 
-export async function getData(count: number) {
+export async function getData(count) {
   try {
-    const apyKey = process.env.NASA_API_KEY;
+    const apyKey = "j2zipbCE6bLP8y8WyyMb39Sam3Tnu5eM6abgmUiE";
+    // const apyKey = process.env.NASA_API_KEY;
     // Make the HTTP GET request to the NASA API
     const response = await fetch(
       `https://api.nasa.gov/planetary/apod?api_key=${apyKey}&count=${count}`
@@ -17,14 +18,14 @@ export async function getData(count: number) {
         response.status,
         response.statusText
       );
-      // throw new Error(`Failed to fetch data: ${response.statusText}`);
+      throw new Error(`Failed to fetch data: ${response.statusText}`);
     }
 
     const data = await response.json(); // Parse and return the data
 
     // Validate response type (if you expect an array)
     if (!Array.isArray(data)) {
-      // throw new Error("Unexpected API response format: expected an array.");
+      throw new Error("Unexpected API response format: expected an array.");
     }
 
     return data;
